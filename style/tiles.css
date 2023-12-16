@@ -1,0 +1,19 @@
+.tileContainer {
+    height: 26vh;
+    width : 26vh;
+    margin: 1vh 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tile {
+    display: block;
+    height: 26vh;
+    width : 26vh;    
+    box-shadow: black 5px 5px 10px 0;
+    border-radius: 5%;
+    transition : width 500ms;    
+    background-size: 100% 100%;
+}
