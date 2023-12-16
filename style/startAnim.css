@@ -1,0 +1,43 @@
+
+
+.beginCurtain {
+    position: fixed;
+    height: 100vh;
+    width : 50vw;
+    background-color: black;
+    z-index: 5;
+    transition: left 1250ms;
+}
+
+#left {
+    left : 0;
+}
+
+#right {
+    left : 50vw;
+}
+
+#startLogo {
+    position : fixed;
+    width : 25vmin;
+    aspect-ratio: 1;
+    left : calc(50vw - 12.5vmin);
+    top : calc(50vh - 12.5vmin);
+    z-index: 10;
+    opacity : 0;
+    transition : opacity 1000ms;
+}
+
+#startTitle {
+    color : white;
+    font-family: 'smile', sans-serif;
+    position: fixed;
+    font-size: 8vmin;
+    width: 80vw;
+    text-align: center;
+    top : -15vh;
+    left : 10vw;
+    z-index: 10;
+    opacity: 1;
+    transition : opacity 1000ms;
+}

@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'smile';
+    src: url('./smile.otf');
+}
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    --back-color : #f5deb3;
+    --font-color : #000000;
+}
+
+body {
+    background-color: var(--back-color);
+}
+
+header, main, nav {
+    position: fixed;
+    width : 100vw;
+    left : 0;
+    overflow: hidden;
+}
+
+header {
+    top : 0;
+    height: 20vh;
+   
+}
+
+main {
+    top : 20vh;
+    height: 60vh;
+}
+
+nav {
+    top : 80vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.partTitle {
+    position : fixed;
+    text-align: center;
+    width : 80vw;
+    height: 10vh;
+    top : 5vh;
+    left : 10vw;
+    font-family: 'smile', sans-serif;
+    font-size: 8vh;
+    color : var(--font-color);
+    transition : opacity 500ms;
+}
+
+#playTitle {
+    opacity : 1;    
+}
+
+#toolboxTitle {
+    opacity : 0;   
+}
+
+.mainDiv{
+    position: fixed;
+    height : 60vh;
+    top : 20vh;
+    transition: left 1000ms;
+}
+
+#playDiv {
+    width : 60vh;
+    left : calc(50vw - 30vh);
+    /*pour test :*/
+    background-image: url('../assets/general/qrcode.png');
+    background-size: cover;
+}
+
+#toolboxDiv {
+    width : 80vw;
+    left : 110vw;
+    
+}
+
+.navButton {
+    background-color: var(--back-color);
+    color : var(--font-color);
+    font-family: 'smile', sans-serif;
+    font-size: 3.5vh;
+    padding: 1vh 2vw;
+    margin : 5vw;
+    border : none;
+    border-radius: 2vmin;
+    box-shadow: var(--font-color) 5px 5px 10px 0;
+    transition: box-shadow 400ms, background-color 400ms, color 400ms;
+}
+
+.navButton:hover {
+    box-shadow: none;
+    background-color: var(--font-color);
+    color : var(--back-color)
+}
