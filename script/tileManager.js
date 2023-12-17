@@ -9,15 +9,42 @@ export function tileManager() {
     let reverseFunctions = []
     let backFunctions = []
 
+    
+
     function tileReverse(i) {
         this.removeEventListener('mouseover', reverseFunctions[i])
+
+        //Detection de la position du pointeur pendant l'animation
+        let onZone = true
+        
+        function mouseDetect(event) {
+            if(event.type=='mouseover') {
+                onZone = true
+            } else if(event.type=='mouseleave') {
+                onZone =false
+            }
+        }
+        
+        let container = this.parentNode
+
+        container.addEventListener('mouseleave', event => mouseDetect(event))
+        container.addEventListener('mouseover', event => mouseDetect(event))
+
+        //animation
        
         this.style.width = '0'
     
         setTimeout(()=>{
             this.style.backgroundImage = `url("${tileList[i].ver}")`
             this.style.width = '26vh'
-            setTimeout(()=>this.addEventListener('mouseleave', backFunctions[i]),500)
+            setTimeout(()=>{
+                this.addEventListener('mouseleave', backFunctions[i])
+                if(!onZone) {
+                    backFunctions[i]()
+                }
+                container.removeEventListener('mouseleave', event => mouseDetect(event))
+                container.removeEventListener('mouseover', event => mouseDetect(event))
+                },500)
             }, 500)
     }
     
@@ -29,7 +56,9 @@ export function tileManager() {
         setTimeout(()=>{
             this.style.backgroundImage = `url("${tileList[i].rec}")`
             this.style.width = '26vh'
-            setTimeout(()=>this.addEventListener('mouseover', reverseFunctions[i]),500)
+            setTimeout(()=>{
+                this.addEventListener('mouseover', reverseFunctions[i])
+                },500)
             }, 500)
     }
 

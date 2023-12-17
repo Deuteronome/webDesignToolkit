@@ -28,5 +28,15 @@ export let tileList = [
         'url' : 'https://www.neographefactory.com/toolbox/inspirations',
         'rec' : '../assets/tileBkgd/ngrpRec.png',
         'ver' : '../assets/tileBkgd/ngrpVer.png'
+    },
+    {
+        'url' : 'https://helpx.adobe.com/fr/xd/get-started.html',
+        'rec' : '../assets/tileBkgd/xdRec.png',
+        'ver' : '../assets/tileBkgd/xdVer.png'
+    },
+    {
+        'url' : 'https://www.figma.com/fr/',
+        'rec' : '../assets/tileBkgd/figmaRec.png',
+        'ver' : '../assets/tileBkgd/figmaVer.png'
     }
 ]

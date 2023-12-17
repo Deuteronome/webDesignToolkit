@@ -16,7 +16,8 @@ export function pageNavigation() {
 
         playDiv.style.left = `${playDivInitialLetf-widthOffset}px`
         toolboxDiv.style.left = '10vw'
-
+        playButton.classList.remove('navActive')
+        toolboxButton.classList.add('navActive')
 
     }
 
@@ -26,6 +27,8 @@ export function pageNavigation() {
 
         playDiv.style.left = `${playDivInitialLetf}px`
         toolboxDiv.style.left = '110vw'
+        toolboxButton.classList.remove('navActive')
+        playButton.classList.add('navActive')
     }
 
     playButton.addEventListener('click', toPlay)

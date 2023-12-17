@@ -71,7 +71,7 @@ nav {
 }
 
 #playDiv {
-    width : 60vh;
+    width : 60vh;    
     left : calc(50vw - 30vh);
     /*qrcode à mettre à jour:*/
     background-image: url('../assets/general/qrcode.png');
@@ -85,9 +85,10 @@ nav {
 
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
     flex-wrap: wrap;
+    overflow:scroll;
     
 }
 
@@ -108,4 +109,8 @@ nav {
     box-shadow: none;
     background-color: var(--font-color);
     color : var(--back-color)
+}
+
+.navActive {
+    box-shadow: none;
 }

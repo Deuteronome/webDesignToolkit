@@ -14,19 +14,16 @@ export function startAnim () {
 
         //chute du titre
         setTimeout(()=>{
-            let titleStartTop = title.getBoundingClientRect().top
-            let titleHeight = title.getBoundingClientRect().bottom - titleStartTop
-            let titleStop = window.innerHeight/2 - titleHeight/2
-            
+            let titleStartTop = title.getBoundingClientRect().top           
+
+           
             for(let j = 1; j<25; j++) {
                 setTimeout(()=>{
                     title.style.top = `${titleStartTop + j*j}px`
                     
                 },timestep*j)
                 
-            }
-
-            
+            }            
         },1400)
 
 
