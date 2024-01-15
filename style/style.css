@@ -15,6 +15,20 @@ body {
     background-color: var(--back-color);
 }
 
+#sample {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#designSample {
+    display: block;
+    width: 100vw;
+    max-height: 100vh;
+}
+
 header, main, nav {
     position: fixed;
     width : 100vw;
@@ -74,7 +88,7 @@ nav {
     width : 60vh;    
     left : calc(50vw - 30vh);
     /*qrcode à mettre à jour:*/
-    background-image: url('../assets/general/qrcode.png');
+    background-image: url('../assets/general/letplay.png');
     background-size: cover;
 }
 

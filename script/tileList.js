@@ -1,5 +1,10 @@
 export let tileList = [
     {
+        'url' : './designSample.htm',
+        'rec' : '../assets/tileBkgd/jlecRec.png',
+        'ver' : '../assets/tileBkgd/jlecVer.png'
+    },
+    {
         'url' : 'https://www.canva.com/fr_fr/',
         'rec' : '../assets/tileBkgd/canvaRec.png',
         'ver' : '../assets/tileBkgd/canvaVer.png'
